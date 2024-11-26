@@ -1,7 +1,7 @@
 /*
  * (c) 2013-2024  Heinrich Hussmann und Uwe Aßmann, TU Dresden
  */
-package st2e3;
+package com.st2e3;
 
 import java.util.AbstractCollection;
 import java.util.Collection;
