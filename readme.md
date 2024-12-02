@@ -16,4 +16,8 @@ Um den Testvorgang anzustoßen werden wir folgenden Befehl nutzen:
 mvn test compile
 ```
 4.
-#TODO
+Wir haben eine dependencies für AssertJ und drei für JUnit 5 hinzugefügt, um flüssiges Testen zu ermöglichen und Assertions schreiben zu können
+Ebenfalls haben wir uns dazu entschieden, für ein konstantes Testen zum Build-Cycle hinzuzufügen, dass automatisch getestet wird. Das heißt, dass bei folgendem Befehl auch gleichzeitig getestet wird:
+```cmd
+mvn package
+```
