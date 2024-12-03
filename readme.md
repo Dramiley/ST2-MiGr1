@@ -22,7 +22,12 @@ Ebenfalls haben wir uns dazu entschieden, für ein konstantes Testen zum Build-C
 mvn package
 ```
 
-5. Wir haben uns mit EclEmma und JaCoCo vertraut gemacht und herausgefunden, dass es sich um ein gemeinsames Plugin handelt, welches die Codeabdeckung des Programms trackt und Feedback dazu gibt. Wir haben uns in Visual Studio Code die Extension "Koverage" installiert, um die JaCoCo Auswertung im IDE zu sehen. Außerdem kann man die Auswertung auf einer ausgegebenen html Website anzeigen. 
+5. 
+Wir haben uns mit EclEmma und JaCoCo vertraut gemacht und herausgefunden, dass es sich um ein gemeinsames Plugin handelt, welches die Codeabdeckung des Programms trackt und Feedback dazu gibt. Wir haben uns in Visual Studio Code die Extension "Koverage" installiert, um die JaCoCo Auswertung im IDE zu sehen. Außerdem kann man die Auswertung auf einer ausgegebenen html Website anzeigen. 
 Um JaCoCo in Maven zu konfigurieren haben wir ein weiteres Plugin hinzugefügt. 
 
 Die Art der Codeabdeckung bei JaCoCo ist einerseits die Line-Coverage (Linienabdeckung) die einzelne Zeilen überprüft und die Branch-Coverage, die zudem auch einzelne if/else-Statements abdecken kann. Man kann JaCoCo in dem Sinne der Ergebnisausgabe konfigurieren, wir haben uns wie oben genannt für eine html basirte Ausgabe entschieden.
+
+6. 
+Wir haben eine weitere dependency für die JUnit TestSuite hinzugefügteine TestSuite erstellt und die Testklassen implementiert. Außerdem habne wir getestet ob der command "mvn compile" uns ausgibt, dass die Tests fehlschlagen, was sich bewahrheitete.
+Eine 
