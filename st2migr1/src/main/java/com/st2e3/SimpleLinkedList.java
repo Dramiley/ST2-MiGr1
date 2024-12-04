@@ -70,6 +70,7 @@ public class SimpleLinkedList<E> extends AbstractCollection<E> implements Collec
 
 		@Override
 		public void remove() {
+			
 			throw new UnsupportedOperationException();
 		}
 	}

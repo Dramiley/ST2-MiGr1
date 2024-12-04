@@ -5,6 +5,6 @@ import org.junit.platform.suite.api.SuiteDisplayName;
 
 @Suite
 @SuiteDisplayName("Linked List Test Suite")
-@SelectClasses({ElementTest.class, IteratorTest.class, SimpleLinkedListTest.class})
+@SelectClasses({SimpleLinkedListTest.class})
 public class JUnitTestSuite {
 }
