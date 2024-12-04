@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.st2e3.SimpleLinkedListTest" time="0.04" tests="5" errors="1" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.st2e3.SimpleLinkedListTest" time="0.039" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="17.0.8+9-LTS-211"/>
@@ -60,17 +60,9 @@
     <property name="sun.stdout.encoding" value="cp850"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testAdd" classname="com.st2e3.SimpleLinkedListTest" time="0.01"/>
+  <testcase name="testAdd" classname="com.st2e3.SimpleLinkedListTest" time="0.015"/>
   <testcase name="testSize" classname="com.st2e3.SimpleLinkedListTest" time="0.001"/>
-  <testcase name="testIteratorOneElement" classname="com.st2e3.SimpleLinkedListTest" time="0.017">
-    <error message="Cannot read field &quot;elem&quot; because &quot;this.current&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot read field "elem" because "this.current" is null
-	at com.st2e3.SimpleLinkedListTest.testIteratorOneElement(SimpleLinkedListTest.java:59)
-</error>
-  </testcase>
-  <testcase name="testIteratorEmpty" classname="com.st2e3.SimpleLinkedListTest" time="0.003"/>
-  <testcase name="testIterator" classname="com.st2e3.SimpleLinkedListTest" time="0.005">
-    <failure message="expected: &lt;1&gt; but was: &lt;2&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <1> but was: <2>
-	at com.st2e3.SimpleLinkedListTest.testIterator(SimpleLinkedListTest.java:38)
-]]></failure>
-  </testcase>
+  <testcase name="testIteratorOneElement" classname="com.st2e3.SimpleLinkedListTest" time="0.013"/>
+  <testcase name="testIteratorEmpty" classname="com.st2e3.SimpleLinkedListTest" time="0.002"/>
+  <testcase name="testIterator" classname="com.st2e3.SimpleLinkedListTest" time="0.002"/>
 </testsuite>

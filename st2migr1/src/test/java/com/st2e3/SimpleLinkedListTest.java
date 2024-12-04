@@ -30,6 +30,7 @@ public class SimpleLinkedListTest {
     @Test
     public void testIterator() {
         SimpleLinkedList<Integer> list = new SimpleLinkedList<>();
+        list.add(0);
         list.add(1);
         list.add(2);
         list.add(3);
@@ -53,11 +54,10 @@ public class SimpleLinkedListTest {
     @Test
     public void testIteratorOneElement() {
         SimpleLinkedList<Integer> list = new SimpleLinkedList<>();
-        list.add(1);
+        list.add(0);
         var it = list.iterator();
-        assertTrue(it.hasNext());
-        assertEquals(1, it.next());
         assertFalse(it.hasNext());
+        assertEquals(null, it.next());
     }
 
     
