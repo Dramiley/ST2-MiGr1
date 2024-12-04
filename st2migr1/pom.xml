@@ -28,19 +28,11 @@
                         <version>1.0.0</version>
                     </dependency>
                 </dependencies>
-                <configuration>
-                    <additionalClasspathElements>
-                        <additionalClasspathElement>src/test/java/</additionalClasspathElement>
-                    </additionalClasspathElements>
-                     <forkCount>3</forkCount>
-                        <reuseForks>true</reuseForks>
-                        <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.7.7.201606060606</version>
+                <version>0.8.12</version>
                 <executions>
                     <execution>
                         <id>default-prepare-agent</id>
@@ -110,6 +102,11 @@
             <artifactId>junit-platform-suite</artifactId>
             <version>1.8.2</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-commons</artifactId>
+            <version>1.8.2</version>
         </dependency>
     </dependencies>
 </project>

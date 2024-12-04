@@ -1,3 +1,0 @@
-# Created at 2024-12-03T12:34:51.607
-Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FATAL ERROR in native method: processing of -javaagent failed, processJavaStart failed'.
-

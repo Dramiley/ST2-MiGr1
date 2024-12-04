@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: com.st2e3.SimpleLinkedListTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.029 sec <<< FAILURE! - in com.st2e3.SimpleLinkedListTest
+testAdd()  Time elapsed: 0.013 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot assign field "next" because "this.end" is null
+	at com.st2e3.SimpleLinkedListTest.testAdd(SimpleLinkedListTest.java:12)
+
+testSize()  Time elapsed: 0.007 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot assign field "next" because "this.end" is null
+	at com.st2e3.SimpleLinkedListTest.testSize(SimpleLinkedListTest.java:22)
+
+testIteratorOneElement()  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot assign field "next" because "this.end" is null
+	at com.st2e3.SimpleLinkedListTest.testIteratorOneElement(SimpleLinkedListTest.java:56)
+
+testIterator()  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: Cannot assign field "next" because "this.end" is null
+	at com.st2e3.SimpleLinkedListTest.testIterator(SimpleLinkedListTest.java:33)
+
