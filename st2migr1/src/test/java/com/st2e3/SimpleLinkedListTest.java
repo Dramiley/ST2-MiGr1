@@ -2,6 +2,7 @@ package com.st2e3;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.beans.Transient;
+import java.util.NoSuchElementException;
 
 import org.junit.jupiter.api.Test;
 
@@ -57,8 +58,6 @@ public class SimpleLinkedListTest {
         list.add(0);
         var it = list.iterator();
         assertFalse(it.hasNext());
-        assertEquals(null, it.next());
-    }
-
-    
+        assertThrows(NoSuchElementException.class, () -> it.next());
+    }    
 }
