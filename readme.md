@@ -36,3 +36,24 @@ Als dann alles aufgestellt war und wir nach einiger Hilfestellung auch Feedback 
 Als wir die Tests zum Laufen gebracht haben ist uns zunächst aufgefallen, dass die SimpleLinkedList Klasse teilweise falsch ist. So gab es zunächst Probleme mit der add-Funktion, welche wir relativ schnell fixen konnten. Danach waren von 6 geschriebenen Tests schon 4 richtig. Die weiteren gaben uns Probleme bei der hasNext-Funktion, welche wir auch nochmal ausbessern mussten. Schlussendlich gab es nur noch Probleme damit, dass current null sein konnte, was immer wieder NullpointerExeptions gab. Nachdem verhindert wurde, dass der Fehler auftritt, indem current nicht mehr null werden konnte, haben alle Tests geklappt.
 
 7. Um Spotbugs zu nutzen fügten wir es in die pom.xml Datei hinzu. Spotbugs hat uns 2 Fehler angezeigt: Iterator.next() soll wenn es kein nächstes Element gibt, eine NoSuchElementExeption werfen. Außerdem hat SimpleLinkedList Collection<E> implementiert, was aber bereits durch AbstractCollection<E> implementiert wurde. Wir haben beides behoben und nun zeigt Spotbugs 0 Fehler an. Der Java compiler hat uns allerdings wenig geholfen, da wir mit Informationen regelrecht überladen wurden, und er zu jedem Plugin und Dependency mehrere Zeilen debug code ausspuckte.
+
+8. Wir haben zuerst eine Main-Funktion geschrieben, damit das Debuggen überhaupt mödlich war.
+
+![alt text](1.png)
+Im ersten Bild ist zu sehen, dass wir eine Liste erstellt haben und diese noch leer ist. Siehe Variable list, size=0.
+
+![alt text](2.png)
+Im zweiten Bild ist zu sehen, dass ein Element der Liste hinzugefügt wurde (siehe list, size=1) 
+
+![alt text](3.png)
+Im dritten Bild ist zu sehen, dass ein zweites Element der Liste hinzugefügt wurde (siehe list, size=2)
+
+![alt text](4.png)
+Im 4.Bild sieht man, dass wir einen Iterator erstellt haben und dieser unter der Variable "it" angezeigt wird.
+
+![alt text](5.png)
+Im 5. Bild sieht man, dass wir mit i.hasNext() testen, ob der Iterator, welcher aktuell auf unserem ersten Element liegt, auch registriert, dass es ein weiteres gibt, auf der nächten Stelle. Da dieser true anzeigt stimmt das.
+
+![alt text](6.png)
+Im 6. Bild ist zu segen, dass die Variable next, welche wir testen null anzeigt. Dies geschieht da unser Debug-Breakpoint auf dem zweiten und somit letzten Element angekommen ist und es kein weiteres gibt. HasNext ist immer noch auf "true" gesetzt das wir es erst in der nächsten Zeile updaten/überschreiben. Siehe Bild 7. es wird dann auf "false" gesetzt
+![alt text](7.png)

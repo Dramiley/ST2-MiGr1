@@ -78,4 +78,29 @@ public class SimpleLinkedList<E> extends AbstractCollection<E> {
 	public Iterator<E> iterator() {
 		return new Iter();
 	}
+
+	public static void main(String[] args) {
+		SimpleLinkedList<Integer> list = new SimpleLinkedList<>();
+		
+		
+		list.add(0);
+		list.add(1);
+		
+		
+		
+		var it = list.iterator();
+		boolean hasNext = it.hasNext();
+		it.next();
+		hasNext = it.hasNext();
+		it.next();
+		
+		
+		
+		
+			
+
+		
+		
+		
+	}
 }
