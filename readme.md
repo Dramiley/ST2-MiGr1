@@ -35,9 +35,12 @@ Als dann alles aufgestellt war und wir nach einiger Hilfestellung auch Feedback 
 
 Als wir die Tests zum Laufen gebracht haben ist uns zunächst aufgefallen, dass die SimpleLinkedList Klasse teilweise falsch ist. So gab es zunächst Probleme mit der add-Funktion, welche wir relativ schnell fixen konnten. Danach waren von 6 geschriebenen Tests schon 4 richtig. Die weiteren gaben uns Probleme bei der hasNext-Funktion, welche wir auch nochmal ausbessern mussten. Schlussendlich gab es nur noch Probleme damit, dass current null sein konnte, was immer wieder NullpointerExeptions gab. Nachdem verhindert wurde, dass der Fehler auftritt, indem current nicht mehr null werden konnte, haben alle Tests geklappt.
 
-7. Um Spotbugs zu nutzen fügten wir es in die pom.xml Datei hinzu. Spotbugs hat uns 2 Fehler angezeigt: Iterator.next() soll wenn es kein nächstes Element gibt, eine NoSuchElementExeption werfen. Außerdem hat SimpleLinkedList Collection<E> implementiert, was aber bereits durch AbstractCollection<E> implementiert wurde. Wir haben beides behoben und nun zeigt Spotbugs 0 Fehler an. Der Java compiler hat uns allerdings wenig geholfen, da wir mit Informationen regelrecht überladen wurden, und er zu jedem Plugin und Dependency mehrere Zeilen debug code ausspuckte.
+7. Um Spotbugs zu nutzen fügten wir es in die pom.xml Datei hinzu.  
+![alt text](Screenshots_Aufgabe8/bugSpots.png)
+Spotbugs hat uns 3 Fehler angezeigt: Iterator.next() soll wenn es kein nächstes Element gibt, eine NoSuchElementExeption werfen. Außerdem hat SimpleLinkedList Collection<E> implementiert, was aber bereits durch AbstractCollection<E> implementiert wurde. Zuletzt wird noch ein nutzloser Control Flow markiert in der Methode add, dank der Beschreibung wird deutlich, dass hier ein If-Statement seinen Zweck nicht erfüllt.  Wir haben alles behoben und nun zeigt Spotbugs 0 Fehler an. Der Java compiler hat uns allerdings wenig geholfen, da wir mit Informationen regelrecht überladen wurden, und er zu jedem Plugin und Dependency mehrere Zeilen debug code ausspuckte.
 
-8. Wir haben zuerst eine Main-Funktion geschrieben, damit das Debuggen überhaupt mödlich war.
+
+9. Wir haben zuerst eine Main-Funktion geschrieben, damit das Debuggen überhaupt mödlich war.
 
 ![alt text](1.png)
 Im ersten Bild ist zu sehen, dass wir eine Liste erstellt haben und diese noch leer ist. Siehe Variable list, size=0.
